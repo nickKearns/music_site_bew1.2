@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    
+<h1>Musicians</h1>
+
+    {% if musician_list %}
+    <ul>
+        {% for musician in musician_list %}
+        <ul>
+
+                <li><a href="{% url 'music:musician_detail' musician.id %}">{{ musician.name }}</a></li>
+
+            
+        </ul>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+
+
+
+</body>
+    </html>

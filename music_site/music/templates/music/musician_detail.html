@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    
+
+
+
+    <h1> {{ musician.name }}</h1>
+
+    <h1>Albums</h1>
+
+
+        {% for album in musician.album_set.all %}
+
+            <ul>
+                    <li><a href="{% url 'music:album_detail' album.id %}">{{ album.name }}</a></li>
+
+                    <ul>
+                        <li>
+                            {{ album.genre }}
+                        </li>
+                        <li>
+                            {{ album.publish_date }}
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+        {% endfor %}
+
+
+
+
+
+
+</body>
+    </html>
