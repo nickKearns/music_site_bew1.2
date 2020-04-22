@@ -25,3 +25,7 @@ class MusicianDetailView(generic.DetailView):
 class AlbumDetailView(generic.DetailView):
     model = Album
     template_name = 'music/album_detail.html'
+
+class SongDetailView(generic.DetailView):
+    model = Song
+    template_name = 'music/song_detail.html'

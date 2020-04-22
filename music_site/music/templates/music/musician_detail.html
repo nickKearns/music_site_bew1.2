@@ -16,12 +16,13 @@
             <ul>
                     <li><a href="{% url 'music:album_detail' album.id %}">{{ album.name }}</a></li>
 
+
                     <ul>
                         <li>
-                            {{ album.genre }}
+                            Genre: {{ album.genre }}
                         </li>
                         <li>
-                            {{ album.publish_date }}
+                            Release Date: {{ album.publish_date }}
                         </li>
                     </ul>
                 </li>

@@ -23,6 +23,7 @@ class Song(models.Model):
     name = models.CharField(max_length=100)
     album = models.ForeignKey(Album, on_delete=models.CASCADE, null=True)
     publish_date = models.DateField(null=True)
+    length = models.DecimalField(decimal_places=2, max_digits=10, null=True)
 
 
     def __str__(self):

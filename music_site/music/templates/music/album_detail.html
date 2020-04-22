@@ -12,12 +12,14 @@
         {% for song in album.song_set.all %}
 
             <ul>
-                <li>
-                    {{ song.name }}
-                    <ul>
-                        <li>
-                            {{ song.publish_date }}
-                        </li>
+
+                    <li>
+                        Release Date: {{ song.publish_date }}
+                    </li>
+                    
+                    <li><a href="{% url 'music:song_detail' song.id %}">{{ song.name }}</a></li>
+
+                     
                     </ul>
                 </li>
                 
